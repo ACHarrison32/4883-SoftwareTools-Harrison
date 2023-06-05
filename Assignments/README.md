@@ -1,7 +1,7 @@
 ##  Assignments Folder
 
-|   #   | Folder Link | Assignment Description  |                                        Completed                                             |
-| :---: | ----------- | ----------------------- | -------------------------------------------------------------------------------------------- |
-|   1   | [A1](./A1)  |    Establishing Comms   | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10">  |
-|   2   | [A2](./A2)  |      Code Repository    | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10">  |
-|   1   | [A3](./A3)  |       Software Tool     | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
+|   #   | Assignment Name | Folder Link | Assignment Description  |                                        Completed                                             |
+| :---: | --------------- | ----------- |------------------------ | -------------------------------------------------------------------------------------------- |
+|   1   |   Assignment 1  | [A1](./A1)  |    Establishing Comms   | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10">  |
+|   2   |   Assignment 2  | [A2](./A2)  |      Code Repository    | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10">  |
+|   1   |   Assignment 3  | [A3](./A3)  |       Software Tool     | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
