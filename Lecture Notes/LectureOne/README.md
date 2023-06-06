@@ -1,3 +1,4 @@
+```cpp
 digraph G {
     rankdir = LR;
     
@@ -33,3 +34,4 @@ digraph G {
     //C
 
 }
+```
