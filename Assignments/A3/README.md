@@ -17,5 +17,16 @@
 #### XIV. ChatGPT like software
 
 # Chosen Software Tool
-### Undecided
+## PVS-Studio
+### PVS-Studio is a code analyzer that is designed to detect bugs and potential vulnerabilities in C, C++, C#, and JAVA. PVS-Studio can detect the following:
+#### I. Typos
+#### II. Security Issues
+#### III. Incorrect Method Handeling
+#### IV. Unreachable Code
+#### V. Memory Access Errors
+#### VI. Incorrect Type Hnadeling
+#### VII. Array Index Out of Bounds
+#### VIII. Synchroniztion Errors
+#### IX. Buffer Overflow
+#### X. Serialization and Deserialization Errors
  
