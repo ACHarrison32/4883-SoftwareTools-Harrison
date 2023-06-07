@@ -1,3 +1,4 @@
+# Lecture One
 ```cpp
 digraph G {
     rankdir = LR;
