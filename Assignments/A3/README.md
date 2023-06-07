@@ -29,5 +29,7 @@
 #### VIII. Synchroniztion Errors
 #### IX. Buffer Overflow
 #### X. Serialization and Deserialization Errors
+
+### Recently I has an interview where I was asked about testing and looking for errors in code. You can always look at the code line by line but there has to be an easier way to analyze the code. I then went home and started doing soe research into code analyzers and came accross PVS-Studio. 
  
 ## [Link to PVS-Studio](https://pvs-studio.com/en/pvs-studio/)
