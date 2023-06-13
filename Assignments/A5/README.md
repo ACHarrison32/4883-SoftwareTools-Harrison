@@ -267,7 +267,6 @@ digraph FamilyTree {
 ```
 
 ### Family Tree Data in the csv file
-```cpp
 pid,firstName,lastName,gender,byear,dyear,dage,spouseId,parentId1,parentId2,clan,generation
 0,Jack,Stallings,M,1800,1869,69,1,,,Oakenheart,1
 1,Allison,Stallings,F,1803,1897,94,0,,,Oakenheart,1
@@ -309,4 +308,4 @@ pid,firstName,lastName,gender,byear,dyear,dage,spouseId,parentId1,parentId2,clan
 37,Maddison,Stallings,F,1887,1972,85,36,,,Oakenheart,4
 38,Leslie,Stallings,F,1887,1945,58,,34,35,Oakenheart,4
 39,Jimmy,Stallings,M,1923,1925,2,,37,36,Oakenheart,5
-```
+
