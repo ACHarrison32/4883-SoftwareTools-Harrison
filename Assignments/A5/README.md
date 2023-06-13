@@ -27,9 +27,9 @@ def get_clan_color(clan):
     return 'lightgray'  # Default color for unknown clans
 
 
-# Defines a class Person that represents an individual in the family tree
+# Defines a class Person that represents an individual in the family 
+# tree
 class Person:
-
   def __init__(self,
                pid,
                first_name,
@@ -55,13 +55,14 @@ class Person:
     self.generation = generation
     self.children = []
 
-  # Defines a method in the Person class to add a child to the list of children.
+  # Defines a method in the Person class to add a child to the list 
+  # of children.
   def add_child(self, child):
     self.children.append(child)
 
 
-# Defines a function calculate_age that calculates the age based on the birth year
-# and death year (if provided).
+# Defines a function calculate_age that calculates the age based on 
+# the birth year and death year (if provided).
 def calculate_age(birth_year, death_year=None):
   current_year = datetime.datetime.now().year
   if death_year is None:
@@ -70,10 +71,10 @@ def calculate_age(birth_year, death_year=None):
     return death_year - birth_year
 
 
-# Recursively generates the family tree graph using DOT syntax based on the
-# provided person and writes the graph to a dot_file.
-# Generates the label and shape for the current person and writes the corresponding
-# node declaration to the dot_file.
+# Recursively generates the family tree graph using DOT syntax based 
+# on the provided person and writes the graph to a dot_file.
+# Generates the label and shape for the current person and writes the 
+# corresponding node declaration to the dot_file.
 def generate_family_tree(person, dot_file):
   name = f"{person.first_name} {person.last_name}"
   birth_year = person.birth_year
@@ -81,9 +82,7 @@ def generate_family_tree(person, dot_file):
   age = calculate_age(birth_year, person.death_year)
   clan_color = get_clan_color(person.clan)
   label = f"{name}\\n{birth_year} - {death_year}\\nAge: {age}\\nClan: {person.clan}\\nGen: {person.generation}"
-  dot_file.write(
-    f'\t{person.pid} [label="{label}", shape=rectangle, style=filled, fillcolor={clan_color}];\n'
-  )
+  dot_file.write(f'\t{person.pid} [label="{label}", shape=rectangle, style=filled, fillcolor={clan_color}];\n')
   # If the person has a spouse, it retrieves the spouse information, generates
   # the label and shape, and writes the spouse node declaration and the spouse
   # connection to the dot_file.
@@ -94,18 +93,13 @@ def generate_family_tree(person, dot_file):
     spouse_death_year = spouse.death_year or "Still Alive"
     spouse_age = calculate_age(spouse_birth_year, spouse.death_year)
     spouse_clan_color = get_clan_color(spouse.clan)
-    spouse_label = f"{spouse_name}\\n{spouse_birth_year} - {spouse_death_year}\\nAge: {spouse_age}\\nClan: {spouse.clan}\\nGen: {spouse.generation}"
-    dot_file.write(
-      f'\t{person.pid} -> {person.spouse_id} [label="Spouse", dir=none, penwidth=2, color="blue"];\n'
-    )
-    dot_file.write(
-      f'\t{person.spouse_id} [label="{spouse_label}", shape=rectangle, style=filled, fillcolor={spouse_clan_color}];\n'
-    )
+    spouse_label = f"{spouse_name}\\n{spouse_birth_year} - {spouse_death_year}\\nAge: {spouse_age}\\nClan: {spouse.clan}\\nGen:{spouse.generation}"
+    dot_file.write(f'\t{person.pid} -> {person.spouse_id} [label="Spouse", dir=none, penwidth=2, color="blue"];\n')
+    dot_file.write(f'\t{person.spouse_id} [label="{spouse_label}", shape=rectangle, style=filled, fillcolor={spouse_clan_color}];\n')
   # Recursively generates the family tree for each child of the current person.
   for child in person.children:
     dot_file.write(f'\t{person.pid} -> {child.pid}[penwidth=2];\n')
     generate_family_tree(child, dot_file)
-
 
 # Read input data from CSV file
 # Creates an empty dictionary people to store Person objects.
@@ -129,8 +123,7 @@ with open('family_tree_data.csv', 'r') as file:
     generation = int(row['generation'])
     # Creates a new Person object with the extracted values and adds it to the
     # people dictionary using the person's ID as the key.
-    person = Person(pid, first_name, last_name, gender, birth_year, death_year,
-                    spouse_id, parent_id1, parent_id2, clan, generation)
+    person = Person(pid, first_name, last_name, gender, birth_year, death_year,spouse_id, parent_id1, parent_id2, clan, generation)
     people[pid] = person
 
 # Build relationships between people and determine the maximum generation
