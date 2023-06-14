@@ -7,7 +7,8 @@ color_map = {
   'Silverwood': 'green',
   'Thornfield': 'yellow',
   'Blackthorn': 'orange',
-  'Brazenbush': 'red'
+  'Brazenbush': 'red',
+  'Ironhammer': 'pink',
   # Add more clan-color mappings here
 }
 
