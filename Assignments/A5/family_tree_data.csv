@@ -43,7 +43,7 @@ pid,firstName,lastName,gender,byear,dyear,dage,spouseId,parentId1,parentId2,clan
 41,Meradith,Johnson,F,1957,2022,65,40,,,Thornfield,6
 42,Kalyb,Johnson,M,1977,,46,43,40,41,Thornfield,7
 43,Mariya,Johnson,F,1978,,45,42,,,Thornfield,7
-44,Jiriya,Johnson,F,1999,,,,42,43,Thornfield,8
+44,Jiriya,Johnson,M,1999,,,,42,43,Thornfield,8
 45,Sara,Johnson,F,1999,,,,42,43,Thornfield,8
 46,Whitney,Johnson,F,1999,,,,42,43,Thornfield,8
 47,Peter,Harrison,M,1979,,44,,29,30,Brazenbush,7
