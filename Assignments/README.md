@@ -8,3 +8,4 @@
 |   4   |   Assignment 4  | [A04](./A4)  |Graphviz Binary Serach Tree| <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
 |   5   |   Assignment 5  | [A05](./A5)  |  Family Tree Assignment | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
 |   6   |   Assignment 6  | [A06](./A6)  |Software Tool Presentation| <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
+|   7   |   Assignment 7  | [A07](./A7)  |        Webscraping      | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
