@@ -39,3 +39,16 @@ pid,firstName,lastName,gender,byear,dyear,dage,spouseId,parentId1,parentId2,clan
 37,Maddison,Stallings,F,1887,1972,85,36,,,Oakenheart,4
 38,Leslie,Stallings,F,1887,1945,58,,34,35,Oakenheart,4
 39,Jimmy,Stallings,M,1923,1925,2,,37,36,Oakenheart,5
+40,Martin,Johnson,M,1953,2003,50,41,13,14,Thornfield,6
+41,Meradith,Johnson,F,1957,2022,65,40,,,Thornfield,6
+42,Kalyb,Johnson,M,1977,,46,43,40,41,Thornfield,7
+43,Mariya,Johnson,F,1978,,45,42,,,Thornfield,7
+44,Jiriya,Johnson,F,1999,,,,42,43,Thornfield,8
+45,Sara,Johnson,F,1999,,,,42,43,Thornfield,8
+46,Whitney,Johnson,F,1999,,,,42,43,Thornfield,8
+47,Peter,Harrison,M,1979,,44,,29,30,Brazenbush,7
+48,Ezekiel,Harrison,M,1999,,23,,31,32,Brazenbush,8
+49,Bartholomew,Harrison,M,2002,,,,31,32,Brazenbush,8
+50,Charolette,Harrison,F,1997,,,51,31,32,Ironhammer,8
+51,Jerimiah,Jefferies,M,1997,,,50,,,Ironhammer,8
+52,Elizabeth,Jefferies,F,2023,,,,50,51,Ironhammer,9
