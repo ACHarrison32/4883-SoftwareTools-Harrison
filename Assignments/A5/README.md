@@ -1,7 +1,7 @@
 # Assignment 5 - Creating a Family Tree using python and graphviz
 
 ### Family Tree Generated
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A5/Family_Tree.png">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A5/Family_Tree_Graphviz.png">
 
 ### Python code used to make the dot file
 ```cpp
