@@ -1,71 +1,107 @@
 import PySimpleGUI as sg
+import requests
+from bs4 import BeautifulSoup
 from datetime import datetime
+import json
+
+
+def processJson():
+    with open('airport-codes.json') as f:
+        data = json.load(f)
+
+    return data
+
 
 def currentDate(returnType='tuple'):
     """ Get the current date and return it as a tuple, list, or dictionary.
     Args:
-        returnType (str): The type of object to return.  Valid values are 'tuple', 'list', or 'dict'.
+        returnType (str): The type of object to return. Valid values are 'tuple', 'list', or 'dict'.
     """
+    now = datetime.now()
     if returnType == 'tuple':
-        return (datetime.now().month, datetime.now().day, datetime.now().year)
+        return now.month, now.day, now.year
     elif returnType == 'list':
-        return [datetime.now().month, datetime.now().day, datetime.now().year]
+        return [now.month, now.day, now.year]
+    elif returnType == 'dict':
+        return {
+            'day': now.day,
+            'month': now.month,
+            'year': now.year
+        }
 
-    return {
-        'day': datetime.now().day,
-        'month': datetime.now().month,
-        'year': datetime.now().year
-    }
 
-def buildWeatherURL(month=None, day=None, year=None, airport=None, filter=None):
-    """ A GUI to pass parameters to get the weather from the web.
-    Args:
-        month (int): The month to get the weather for.
-        day (int): The day to get the weather for.
-        year (int): The year to get the weather for.
-    Returns:
-        Should return a URL like this, but replace the month, day, and year, filter, and airport with the values passed in.
-        https://www.wunderground.com/history/daily/KCHO/date/2020-12-31
-    """
+def buildWeatherURL(json_data, airport_codes):
+    # Get the current date
     current_month, current_day, current_year = currentDate('tuple')
 
-    if not month:
-        month = current_month
-    if not day:
-        day = current_day
-    if not year:
-        year = current_year
-
-    # Create the GUI's layout using dropdown menus and input boxes for user input
+    # PySimpleGUI layout for input form
     layout = [
-        [sg.Text('Month')],
-        [sg.Combo(values=[str(i) for i in range(1, 13)], default_value=str(1))],
-        [sg.Text('Day')],
-        [sg.Combo(values=[str(i) for i in range(1, 32)], default_value=str(1))],
-        [sg.Text('Year')],
-        [sg.Combo(values=[str(i) for i in range(2000, 2024)], default_value=str(2000))],
-        [sg.Text('Code')],
-        [sg.InputText()],
-        [sg.Text('Daily / Weekly / Monthly')],
-        [sg.Combo(values=['Daily', 'Weekly', 'Monthly'], default_value='Daily')],
-        [sg.Submit(), sg.Cancel()]
+        [sg.Text('Day'), sg.Combo(values=[str(i) for i in range(1, 32)], default_value=str(current_day), key='day')],
+        [sg.Text('Month'), sg.Combo(values=[str(i) for i in range(1, 13)], default_value=str(current_month), key='month')],
+        [sg.Text('Year'), sg.Combo(values=[str(i) for i in range(2000, 2024)], default_value=str(current_year), key='year')],
+        [sg.Text('Airport Code'), sg.Combo(values=airport_codes, key='airport')],
+        [sg.Text('Daily / Weekly / Monthly'), sg.Combo(values=['Daily', 'Weekly', 'Monthly'], key='filter')],
+        [sg.Button('Submit')]
     ]
 
-    window = sg.Window('Get The Weather', layout)
+    # Create the PySimpleGUI window for input form
+    window = sg.Window('Weather Data Input', layout)
 
-    event, values = window.read()
-    window.close()
+    # Event Loop for input form
+    while True:
+        event, values = window.read()
+        if event == sg.WINDOW_CLOSED:
+            break
 
-    month = int(values[0])
-    day = int(values[1])
-    year = int(values[2])
-    code = values[3]
-    filter = values[4]
+        day = values['day']
+        month = values['month']
+        year = values['year']
+        airport_code = values['airport']
+        filter = values['filter']
 
-    sg.popup('You entered', f"Month: {month}, Day: {day}, Year: {year}, Code: {code}, Filter: {filter}")
+        # Build the weather URL
+        url = f"https://www.wunderground.com/history/{filter.lower()}/{airport_code}/date/{year}-{month}-{day}"
+        window.close()
 
-    # return the URL to pass to wunderground to get appropriate weather data
-    return f"https://www.wunderground.com/history/{filter.lower()}/{airport}/date/{year}-{month:02d}-{day:02d}"
+        try:
+            # Retrieve weather data
+            response = requests.get(url)
+            soup = BeautifulSoup(response.text, 'html.parser')
 
-if __name__ == '__main__':
-    buildWeatherURL()
+            # Extract relevant data from the parsed HTML
+            max_temp = soup.find('span', class_='wx-value').text
+            avg_temp = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').text
+            min_temp = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').text
+            precip = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').text
+            avg_precip = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').text
+            wind_max = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').text
+            dew_point = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').text
+
+            # PySimpleGUI layout for output table
+            layout = [
+                [sg.Table(values=[[f"{month}-{day}-{year}", max_temp, avg_temp, min_temp, precip, avg_precip, wind_max, dew_point]],
+                          headings=['Date', 'Max Temp', 'Avg Temp', 'Min Temp', 'Precip', 'Avg Precip', 'Max Wind Speed', 'Dew Point'],
+                          auto_size_columns=True,
+                          justification='center')],
+                [sg.Button('OK')]
+            ]
+
+            # Create the PySimpleGUI window for output table
+            window = sg.Window('Weather Data Output', layout)
+
+            # Event Loop for output table
+            while True:
+                event, _ = window.read()
+                if event == sg.WINDOW_CLOSED or event == 'OK':
+                    break
+
+            window.close()
+
+        except requests.exceptions.RequestException:
+            sg.popup('Error: Failed to retrieve weather data!')
+
+
+if __name__ == "__main__":
+    json_data = processJson()
+    airport_codes = [item['icao'] for item in json_data]
+    buildWeatherURL(json_data, airport_codes)
