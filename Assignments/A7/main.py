@@ -6,7 +6,7 @@ import json
 
 
 def processJson():
-    with open('airport-codes.json') as f:
+    with open('./airport-codes.json', 'r',encoding = 'utf-8') as f:
         data = json.load(f)
 
     return data
@@ -30,17 +30,52 @@ def currentDate(returnType='tuple'):
         }
 
 
+def scrapeWeatherData(url):
+    try:
+        # Retrieve weather data
+        response = requests.get(url)
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Extract relevant data from the parsed HTML
+        weather_data = soup.find_all('span', class_='wx-value')
+
+        if len(weather_data) >= 8:
+            high_temp = weather_data[0].text
+            low_temp = weather_data[1].text
+            avg_temp = weather_data[2].text
+            precip = weather_data[3].text
+            dew_point = weather_data[4].text
+            max_wind_speed = weather_data[5].text
+            visibility = weather_data[6].text
+            sea_level_pressure = weather_data[7].text
+
+            return {
+                'High Temp': high_temp,
+                'Low Temp': low_temp,
+                'Avg Temp': avg_temp,
+                'Precipitation': precip,
+                'Dew Point': dew_point,
+                'Max Wind Speed': max_wind_speed,
+                'Visibility': visibility,
+                'Sea Level Pressure': sea_level_pressure
+            }
+        else:
+            raise ValueError('Error: Unable to scrape weather data.')
+
+    except requests.exceptions.RequestException:
+        sg.popup('Error: Failed to retrieve weather data!')
+
+
 def buildWeatherURL(json_data, airport_codes):
     # Get the current date
     current_month, current_day, current_year = currentDate('tuple')
 
     # PySimpleGUI layout for input form
     layout = [
-        [sg.Text('Day'), sg.Combo(values=[str(i) for i in range(1, 32)], default_value=str(current_day), key='day')],
-        [sg.Text('Month'), sg.Combo(values=[str(i) for i in range(1, 13)], default_value=str(current_month), key='month')],
-        [sg.Text('Year'), sg.Combo(values=[str(i) for i in range(2000, 2024)], default_value=str(current_year), key='year')],
+        [sg.Text('Day'), sg.Combo(values=[str(i) for i in range(1, 32)], default_value=str(1), key='day')],
+        [sg.Text('Month'), sg.Combo(values=[str(i) for i in range(1, 13)], default_value=str(1), key='month')],
+        [sg.Text('Year'), sg.Combo(values=[str(i) for i in range(2000, 2024)], default_value=str(2000), key='year')],
         [sg.Text('Airport Code'), sg.Combo(values=airport_codes, key='airport')],
-        [sg.Text('Daily / Weekly / Monthly'), sg.Combo(values=['Daily', 'Weekly', 'Monthly'], key='filter')],
         [sg.Button('Submit')]
     ]
 
@@ -57,30 +92,19 @@ def buildWeatherURL(json_data, airport_codes):
         month = values['month']
         year = values['year']
         airport_code = values['airport']
-        filter = values['filter']
 
         # Build the weather URL
-        url = f"https://www.wunderground.com/history/{filter.lower()}/{airport_code}/date/{year}-{month}-{day}"
+        url = f"https://www.wunderground.com/history/daily/{airport_code}/date/{year}-{month}-{day}"
         window.close()
 
         try:
             # Retrieve weather data
-            response = requests.get(url)
-            soup = BeautifulSoup(response.text, 'html.parser')
-
-            # Extract relevant data from the parsed HTML
-            max_temp = soup.find('span', class_='wx-value').text
-            avg_temp = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').text
-            min_temp = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').text
-            precip = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').text
-            avg_precip = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').text
-            wind_max = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').text
-            dew_point = soup.find('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').find_next('span', class_='wx-value').find_next('span', class_='wx-unit').text
+            weather_data = scrapeWeatherData(url)
 
             # PySimpleGUI layout for output table
             layout = [
-                [sg.Table(values=[[f"{month}-{day}-{year}", max_temp, avg_temp, min_temp, precip, avg_precip, wind_max, dew_point]],
-                          headings=['Date', 'Max Temp', 'Avg Temp', 'Min Temp', 'Precip', 'Avg Precip', 'Max Wind Speed', 'Dew Point'],
+                [sg.Table(values=[list(weather_data.values())],
+                          headings=list(weather_data.keys()),
                           auto_size_columns=True,
                           justification='center')],
                 [sg.Button('OK')]
@@ -97,8 +121,8 @@ def buildWeatherURL(json_data, airport_codes):
 
             window.close()
 
-        except requests.exceptions.RequestException:
-            sg.popup('Error: Failed to retrieve weather data!')
+        except ValueError as e:
+            sg.popup(str(e))
 
 
 if __name__ == "__main__":
