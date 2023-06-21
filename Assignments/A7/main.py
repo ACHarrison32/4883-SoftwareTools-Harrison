@@ -6,17 +6,12 @@ import json
 
 
 def processJson():
-    with open('./airport-codes.json', 'r',encoding = 'utf-8') as f:
+    with open('./airport-codes.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
-
     return data
 
 
 def currentDate(returnType='tuple'):
-    """ Get the current date and return it as a tuple, list, or dictionary.
-    Args:
-        returnType (str): The type of object to return. Valid values are 'tuple', 'list', or 'dict'.
-    """
     now = datetime.now()
     if returnType == 'tuple':
         return now.month, now.day, now.year
@@ -34,36 +29,50 @@ def scrapeWeatherData(url):
     try:
         # Retrieve weather data
         response = requests.get(url)
+        response.raise_for_status()  # Raise an exception for 4xx or 5xx status codes
         soup = BeautifulSoup(response.text, 'html.parser')
 
         # Extract relevant data from the parsed HTML
-        weather_data = soup.find_all('span', class_='wx-value')
+        weather_data = {}
 
-        if len(weather_data) >= 8:
-            high_temp = weather_data[0].text
-            low_temp = weather_data[1].text
-            avg_temp = weather_data[2].text
-            precip = weather_data[3].text
-            dew_point = weather_data[4].text
-            max_wind_speed = weather_data[5].text
-            visibility = weather_data[6].text
-            sea_level_pressure = weather_data[7].text
+        # Example: Extract temperature data
+        high_temp_elem = soup.select_one('.day-high .temp')
+        high_temp = high_temp_elem.text if high_temp_elem else 'N/A'
 
-            return {
-                'High Temp': high_temp,
-                'Low Temp': low_temp,
-                'Avg Temp': avg_temp,
-                'Precipitation': precip,
-                'Dew Point': dew_point,
-                'Max Wind Speed': max_wind_speed,
-                'Visibility': visibility,
-                'Sea Level Pressure': sea_level_pressure
-            }
-        else:
-            raise ValueError('Error: Unable to scrape weather data.')
+        low_temp_elem = soup.select_one('.day-low .temp')
+        low_temp = low_temp_elem.text if low_temp_elem else 'N/A'
 
-    except requests.exceptions.RequestException:
-        sg.popup('Error: Failed to retrieve weather data!')
+        avg_temp_elem = soup.select_one('.summary-table .temp .wx-value')
+        avg_temp = avg_temp_elem.text if avg_temp_elem else 'N/A'
+
+        precip_elem = soup.select_one('.precip-val .wx-value')
+        precip = precip_elem.text if precip_elem else 'N/A'
+
+        dew_point_elem = soup.select_one('.dew-point .wx-value')
+        dew_point = dew_point_elem.text if dew_point_elem else 'N/A'
+
+        max_wind_speed_elem = soup.select_one('.max-wind-speed .wx-value')
+        max_wind_speed = max_wind_speed_elem.text if max_wind_speed_elem else 'N/A'
+
+        visibility_elem = soup.select_one('.visibility .wx-value')
+        visibility = visibility_elem.text if visibility_elem else 'N/A'
+
+        sea_level_pressure_elem = soup.select_one('.sea-level-pressure .wx-value')
+        sea_level_pressure = sea_level_pressure_elem.text if sea_level_pressure_elem else 'N/A'
+
+        weather_data['High Temp'] = high_temp
+        weather_data['Low Temp'] = low_temp
+        weather_data['Avg Temp'] = avg_temp
+        weather_data['Precipitation'] = precip
+        weather_data['Dew Point'] = dew_point
+        weather_data['Max Wind Speed'] = max_wind_speed
+        weather_data['Visibility'] = visibility
+        weather_data['Sea Level Pressure'] = sea_level_pressure
+
+        return weather_data
+
+    except (requests.exceptions.RequestException, ValueError) as e:
+        raise ValueError('Error: Failed to retrieve weather data!' + str(e))
 
 
 def buildWeatherURL(json_data, airport_codes):
