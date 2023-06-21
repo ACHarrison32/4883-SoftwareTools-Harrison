@@ -36,28 +36,28 @@ def scrapeWeatherData(url):
         weather_data = {}
 
         # Example: Extract temperature data
-        high_temp_elem = soup.select_one('.day-high .temp')
+        high_temp_elem = soup.select_one('.summary-table .temp .hi')
         high_temp = high_temp_elem.text if high_temp_elem else 'N/A'
 
-        low_temp_elem = soup.select_one('.day-low .temp')
+        low_temp_elem = soup.select_one('.summary-table .temp .lo')
         low_temp = low_temp_elem.text if low_temp_elem else 'N/A'
 
         avg_temp_elem = soup.select_one('.summary-table .temp .wx-value')
         avg_temp = avg_temp_elem.text if avg_temp_elem else 'N/A'
 
-        precip_elem = soup.select_one('.precip-val .wx-value')
+        precip_elem = soup.select_one('.summary-table .precip .wx-value')
         precip = precip_elem.text if precip_elem else 'N/A'
 
-        dew_point_elem = soup.select_one('.dew-point .wx-value')
+        dew_point_elem = soup.select_one('.summary-table .dewpoint .wx-value')
         dew_point = dew_point_elem.text if dew_point_elem else 'N/A'
 
-        max_wind_speed_elem = soup.select_one('.max-wind-speed .wx-value')
+        max_wind_speed_elem = soup.select_one('.summary-table .wind .wx-value')
         max_wind_speed = max_wind_speed_elem.text if max_wind_speed_elem else 'N/A'
 
-        visibility_elem = soup.select_one('.visibility .wx-value')
+        visibility_elem = soup.select_one('.summary-table .visibility .wx-value')
         visibility = visibility_elem.text if visibility_elem else 'N/A'
 
-        sea_level_pressure_elem = soup.select_one('.sea-level-pressure .wx-value')
+        sea_level_pressure_elem = soup.select_one('.summary-table .pressure .wx-value')
         sea_level_pressure = sea_level_pressure_elem.text if sea_level_pressure_elem else 'N/A'
 
         weather_data['High Temp'] = high_temp
