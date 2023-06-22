@@ -102,6 +102,13 @@ def buildWeatherURL(json_data, airport_codes):
         year = values['year']
         airport_code = values['airport']
 
+        # Find the city name for the selected airport code
+        city = ''
+        for item in json_data:
+            if item['icao'] == airport_code:
+                city = item['city']
+                break
+
         # Build the weather URL
         url = f"https://www.wunderground.com/history/daily/{airport_code}/date/{year}-{month}-{day}"
         window.close()
@@ -110,8 +117,12 @@ def buildWeatherURL(json_data, airport_codes):
             # Retrieve weather data
             weather_data = scrapeWeatherData(url)
 
+            # Add city name to the weather data dictionary
+            weather_data['City'] = city
+
             # PySimpleGUI layout for output table
             layout = [
+                [sg.Text(f'City: {city}')],
                 [sg.Table(values=[list(weather_data.values())],
                           headings=list(weather_data.keys()),
                           auto_size_columns=True,
