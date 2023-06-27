@@ -1,6 +1,6 @@
 # A05 - Creating a Family Tree using python and graphviz
 
-### Description:
+## Description:
 #### produce a family tree graph generated using GraphViz and also done programmatically, meaning, you do not create the graph by hand, you use a programming language and (optionally) a library to generate the dot file for the graph.
 
 ## Family Tree Generated
