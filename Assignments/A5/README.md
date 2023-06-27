@@ -3,10 +3,10 @@
 ### Description:
 #### produce a family tree graph generated using GraphViz and also done programmatically, meaning, you do not create the graph by hand, you use a programming language and (optionally) a library to generate the dot file for the graph.
 
-### Family Tree Generated
+## Family Tree Generated
 <img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A5/Family_Tree_Graphviz.png">
 
-### Python code used to make the dot file
+## Python code used to make the dot file
 ```cpp
 import csv
 import datetime
@@ -225,7 +225,7 @@ with open(dot_filename, 'w') as dot_file:
 print(f"DOT file '{dot_filename}' generated successfully.")
 ```
 
-### Dot file created from the Python code
+## Dot file created from the Python code
 ```cpp
 digraph FamilyTree {
 	{ rank = same; }
