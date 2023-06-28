@@ -23,7 +23,7 @@
  - HTML/CSS
  - SQL
 
-## How To Download SonarQube:
+## :computer: How To Download SonarQube:
 #### Video Link on How to Install [SonarQube](https://www.youtube.com/watch?v=arbDl7YOIyM)
 #### Start by making sure you have [Java SE 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) downloaded. You can check this in the Command Terminal using: java -version
 #### Download [SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/success-download-community-edition/) and once downloaded unzip the the file.
