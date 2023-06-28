@@ -1,4 +1,4 @@
-# A06 - SonarQube
+# :computer: A06 - SonarQube
 ## Andrew Harrison
 ## 4883 Software Tools
 ## 06/25/2023
