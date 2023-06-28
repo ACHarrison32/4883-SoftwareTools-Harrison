@@ -35,7 +35,7 @@
 #### Once you have copied the path to the file, open up your Command Terminal and change your directory to the file path:
 #### cd C:\Users\ACHar\sonarqube-10.1.0.73491\bin\windows-x86-64
 #### Once you have opened this directory you are going to want to start sonar: StartSonar.bat
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%202.PNG" width = "750" >
 
 #### This can take a while to start. Mine took around 4 minutes. Just be patient.
 #### When its finished it will tell you that SonarQube is operational
