@@ -23,5 +23,7 @@
  - HTML/CSS
  - SQL
 
-### Video Link on How to Install [SonarQube](https://www.youtube.com/watch?v=arbDl7YOIyM)
+#### Video Link on How to Install [SonarQube](https://www.youtube.com/watch?v=arbDl7YOIyM)
+
+#### Must Have [Java SE 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 
