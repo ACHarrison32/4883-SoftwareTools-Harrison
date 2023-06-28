@@ -33,4 +33,5 @@
 #### Once you have extracted the files, locate the bin folder. Open up the folder that corresponds with your operating system:
 <img src = " ">
 
-#### Once you select the file you are suppose to use, copy the path to the file. It should look something like this: C:\Users\ACHar\sonarqube-10.1.0.73491\bin\windows-x86-64
+#### Once you select the file you are suppose to use, copy the path to the file. It should look something like this:
+#### C:\Users\ACHar\sonarqube-10.1.0.73491\bin\windows-x86-64
