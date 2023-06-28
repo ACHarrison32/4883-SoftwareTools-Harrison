@@ -22,3 +22,6 @@
  - Groovy
  - HTML/CSS
  - SQL
+
+### Video Link on How to Install [SonarQube](https://www.youtube.com/watch?v=arbDl7YOIyM)
+
