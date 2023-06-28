@@ -39,4 +39,4 @@
 
 #### This can take a while to start. Mine took around 4 minutes. Just be patient.
 #### When its finished it will tell you that SonarQube is operational
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%203.PNG" width = "1500" >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%203.PNG"  >
