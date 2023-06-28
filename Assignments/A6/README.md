@@ -31,7 +31,7 @@
 #### Start by making sure you have the correct Java downloaded in the Command Terminal using: java -version
 #### Download [SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/success-download-community-edition/) and once downloaded unzip the the file.
 #### Once you have extracted the files, locate the bin folder. Open up the folder that corresponds with your operating system:
-<img src = " ">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%201.PNG" width="500">
 
 #### Once you select the file you are suppose to use, copy the path to the file. It should look something like this:
 #### C:\Users\ACHar\sonarqube-10.1.0.73491\bin\windows-x86-64
