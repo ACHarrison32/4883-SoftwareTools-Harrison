@@ -1,47 +1,26 @@
-# :computer: A06 - SonarQube
+# :computer: A06 - Sphinx
 ## :name_badge: Andrew Harrison
 ## :school: 4883 Software Tools
 ## :date: 06/25/2023
 
 ### :memo: Description
-#### [SonarQube](https://www.sonarsource.com/open-source-editions/sonarqube-community-edition/) is an open-source static code analyzer. It enables developers to assess the quality of their code by identifying bugs, vulnerabilities, and code smells (specific patterns or characteristics in source code that indicate potential design or implementation problems). SonarQube performs automated code inspections, measuring metrics such as code duplication, complexity, and adherence to coding standards. It supports multiple programming languages and integrates into popular development environments. 
+#### [Sphinx](https://www.sphinx-doc.org/en/master/) is a widely used open-source documentation generation tool. It is commonly used to create documentation for software projects, libraries, and APIs. Sphinx supports various programming languages, but it is particularly popular in the Python community.
 
-### :page_with_curl: Languages supported by SonarQube:
- - Java
- - C#
- - C/C++
- - JavaScript
- - TypeScript
- - Python
- - PHP
- - Ruby
- - Swift
- - Kotlin
- - Go
- - Scala
- - Groovy
- - HTML/CSS
- - SQL
 
-## :computer: How To Download SonarQube:
-#### Video Link on How to Install [SonarQube](https://www.youtube.com/watch?v=arbDl7YOIyM)
-#### Start by making sure you have [Java SE 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html) downloaded. You can check this in the Command Terminal using: java -version
-#### Download [SonarQube](https://www.sonarsource.com/products/sonarqube/downloads/success-download-community-edition/) and once downloaded unzip the the file.
-#### Once you have extracted the files, locate the bin folder. Open up the folder that corresponds with your operating system:
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%201.PNG" width="500">
+## :computer: How To Install Sphinx:
+#### Video link on how to install [Sphinx](https://www.youtube.com/watch?v=WcUhGT4rs5o)
+#### Directions for installing [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)
+#### Start by making sure you have [Python](https://www.python.org/downloads/release/python-3114/) downloaded. You can check this in the Command Terminal using: python --version
+#### Create a folder to keep all your sphinx stuff in
+#### Clone your repository from github to new folder
+#### Create a virtual enviorment: python -m virtualenv .venv
+#### Activate your virtual enviorment: venv\Scripts\activate
+#### Make a new directory to install Sphinx in to better organize.
+#### Install sphinx: pip install sphinx
 
-#### Once you select the file you are suppose to use, copy the path to the file. It should look something like this:
-#### C:\Users\ACHar\sonarqube-10.1.0.73491\bin\windows-x86-64
-#### Once you have copied the path to the file, open up your Command Terminal and change your directory to the file path:
-#### cd C:\Users\ACHar\sonarqube-10.1.0.73491\bin\windows-x86-64
-#### Once you have opened this directory you are going to want to start sonar: StartSonar.bat
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%202.PNG" width = "750" >
+## :desktop_computer: Starting Sphinx:
+#### Quickstart sphinx in command terminal: sphinx-quickstart
+#### Fill out the next few questions
+<img src = " " >
 
-#### This can take a while to start. Mine took around 4 minutes. Just be patient.
-#### When its finished it will tell you that SonarQube is operational
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/SonarQube%203.PNG"  >
-
-## :keyboard: Using SonarQube
-#### Open up your web browser and go to: localhost:9000
-#### Username: admin
-#### Password: admin
+## Creating html documents
