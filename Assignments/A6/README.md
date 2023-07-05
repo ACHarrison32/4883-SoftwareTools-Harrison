@@ -16,7 +16,15 @@
 
 ## :desktop_computer: Starting Sphinx:
 #### Quickstart sphinx in command terminal: sphinx-quickstart
-#### Fill out the next few questions
-<img src = " " >
+#### Fill out the next few questions:
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Quickstart.PNG" >
 
-## Creating html documents
+#### This creates you Sphinx project now you create your HTML documents and document you python code.
+
+## Adding Extensions and Python Module Search Path
+#### First add your Python code documents in the folder that you quickstarted Sphinx in.
+#### Open up your conf.py file: code conf.py
+#### Add the following 3 lines to the file:
+<img src = " ">
+
+
