@@ -21,10 +21,13 @@
 
 #### This creates you Sphinx project now you create your HTML documents and document you python code.
 
-## Adding Extensions and Python Module Search Path
+## :electric_plug: Adding Extensions and Python Module Search Path
 #### First add your Python code documents in the folder that you quickstarted Sphinx in.
 #### Open up your conf.py file: code conf.py
 #### Add the following 3 lines to the file:
-<img src = " ">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Python_Path.PNG">
 
+#### Adding these 3 lines allows Sphinx to locate and import your project’s modules during the documentation generation process
+#### Now we need to add the following Extensions:
+<img src = " " >
 
