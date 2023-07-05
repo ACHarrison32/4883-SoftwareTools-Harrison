@@ -29,5 +29,15 @@
 
 #### Adding these 3 lines allows Sphinx to locate and import your project’s modules during the documentation generation process
 #### Now we need to add the following Extensions:
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Extensions.PNG" >
 
+#### sphinx.ext.autodoc: This extension is used to automatically generate API documentation from your Python code.
+#### sphinx.ext.viewcode: This extension adds links to the source code of documented Python objects, allowing users to easily view the source code.
+#### sphinx.ext.napoleon: This extension allows you to use Google-style or NumPy-style docstrings, providing support for more expressive and readable docstrings.
+#### Once you have added these extensions and the python path install the following command: pip install sphinx-autodoc-typehints
+#### You have now installed everything you need to document your python code
+
+## :file_folder: Creating Your rst Files and Including Modules
+#### Now you want to make your rst files from your python code files.
+#### To do this run the following command: sphinx-apidoc -o <output_directory> <source_directory>
+<img src = " " >
