@@ -12,10 +12,6 @@
 #### Directions for installing [Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html)
 #### Start by making sure you have [Python](https://www.python.org/downloads/release/python-3114/) downloaded. You can check this in the Command Terminal using: python --version
 #### Create a folder to keep all your sphinx stuff in
-#### Clone your repository from github to new folder
-#### Create a virtual enviorment: python -m virtualenv .venv
-#### Activate your virtual enviorment: venv\Scripts\activate
-#### Make a new directory to install Sphinx in to better organize.
 #### Install sphinx: pip install sphinx
 
 ## :desktop_computer: Starting Sphinx:
@@ -24,4 +20,3 @@
 <img src = " " >
 
 ## Creating html documents
-#### [Link](./file:///C:/Users/ACHar/Sphinx%20Project/4883-SoftwareTools-Harrison/Assignments/A6/_build/html/index.html)
