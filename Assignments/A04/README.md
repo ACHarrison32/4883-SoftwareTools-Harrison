@@ -1,6 +1,7 @@
 ## Files
 |   #   | File Name |
-| 1 | [bst.dot]()
+| ----- | --------- |
+| 1 | [bst.dot](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A04/bst.dot) |
 ```cpp
 digraph linkedlist 
 {        
