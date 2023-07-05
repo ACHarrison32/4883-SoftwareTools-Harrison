@@ -54,8 +54,8 @@
 ## :clipboard: Sample Python Documents
 | # | File Name |
 | - | --------- |
-| 1 |[addition.py]()|
-| 2 |[subtraction.py]()|
-| 3 |[multiplication.py]()|
-| 4 |[division.py]()|
-| 5 |[testfile]()|
+| 1 |[addition.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/addition.py)|
+| 2 |[subtraction.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/subtraction.py)|
+| 3 |[multiplication.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/multiplication.py)|
+| 4 |[division.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/division.py)|
+| 5 |[testfile](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/addition.py)|
