@@ -40,4 +40,7 @@
 ## :file_folder: Creating Your rst Files and Including Modules
 #### Now you want to make your rst files from your python code files.
 #### To do this run the following command: sphinx-apidoc -o <output_directory> <source_directory>
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_apidoc.PNG" >
+
+#### Once you have created the rst files, open your modules.rst file and make sure the follwing python file is called.
 <img src = " " >
