@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>testFile module &#8212; Sphinx Presentation 1.0.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="subtraction module" href="subtraction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="subtraction.html" title="subtraction module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Sphinx Presentation 1.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">&lt;no title&gt;</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">testFile module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-testFile">
+<span id="testfile-module"></span><h1>testFile module<a class="headerlink" href="#module-testFile" title="Permalink to this heading">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="testFile.Spamfilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testFile.</span></span><span class="sig-name descname"><span class="pre">Spamfilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_dir</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A naive Bayesian spam filter</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.classify">
+<span class="sig-name descname"><span class="pre">classify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.classify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.classify" title="Permalink to this definition">¶</a></dt>
+<dd><p>classifies a file as spam or ham based on training data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filepath</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(boolean) True-&gt;spam, False-&gt;ham</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.classify_all">
+<span class="sig-name descname"><span class="pre">classify_all</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">known_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'spam'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.classify_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.classify_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Classifies all emails in a testing directory and maintains count of errors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dir_path</strong> – path of testing directory</p></li>
+<li><p><strong>known_type</strong> – str: the known type of testing directory</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.clean_table">
+<span class="sig-name descname"><span class="pre">clean_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">min_freq</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.clean_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.clean_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes entries from frequency table if they are deemed poor indicators.
+or if combined spam/ham frequency is below ‘min_freq’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>min_freq</strong> – if total token count below threshold, delete from table</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.create_frequency_table">
+<span class="sig-name descname"><span class="pre">create_frequency_table</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.create_frequency_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.create_frequency_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates token frequency table from training emails
+:return:  dict{k,v}:  spam/ham frequencies
+k = (str)token, v = {spam_freq: , ham_freq:, prob_spam:, prob_ham:}</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.print_table_info">
+<span class="sig-name descname"><span class="pre">print_table_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.print_table_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.print_table_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print training info:
+- unique tokens in ham and spam, number of emails in training set</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.prob_ham">
+<span class="sig-name descname"><span class="pre">prob_ham</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.prob_ham"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.prob_ham" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the probability that ‘token’ is found in ham emails</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> – (str)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(float) probability ‘token’ is ham based on training emails</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.prob_msg_ham">
+<span class="sig-name descname"><span class="pre">prob_msg_ham</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.prob_msg_ham"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.prob_msg_ham" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the probability that a message is ham</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filepath</strong> – (str) path of email</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(float) probability message is ham</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.prob_msg_spam">
+<span class="sig-name descname"><span class="pre">prob_msg_spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.prob_msg_spam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.prob_msg_spam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the probability that a message is spam</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filepath</strong> – (str) path of email</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(float) probability message is spam</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="testFile.Spamfilter.prob_spam">
+<span class="sig-name descname"><span class="pre">prob_spam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#Spamfilter.prob_spam"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.Spamfilter.prob_spam" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the probability that ‘token’ is found in spam emails</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>token</strong> – (str)</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(float) probability ‘token’ is spam based on training emails</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testFile.clean_split">
+<span class="sig-prename descclassname"><span class="pre">testFile.</span></span><span class="sig-name descname"><span class="pre">clean_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">in_str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#clean_split"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.clean_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes all non-alphanum chars and splits string at whitespace, downcase</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>in_str</strong> – (str) target string</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(list) cleaned strings</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testFile.dir_tokens">
+<span class="sig-prename descclassname"><span class="pre">testFile.</span></span><span class="sig-name descname"><span class="pre">dir_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#dir_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.dir_tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>tokenizes all files contained in ‘dir_path’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dir_path</strong> – directory containing files to be tokenized</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of tokens</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testFile.file_tokens">
+<span class="sig-prename descclassname"><span class="pre">testFile.</span></span><span class="sig-name descname"><span class="pre">file_tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filepath</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#file_tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.file_tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>tokenizes all strings contained in ‘filepath’ after removing      all non-alphanum chars and splitting strings at whitespace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filepath</strong> – path of target file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>list of tokens</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testFile.tokens">
+<span class="sig-prename descclassname"><span class="pre">testFile.</span></span><span class="sig-name descname"><span class="pre">tokens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tok_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/testFile.html#tokens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#testFile.tokens" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of all substrings contained in ‘text’ of size ‘tok_size’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> – (string) text to tokenize</p></li>
+<li><p><strong>tok_size</strong> – length of substrings</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>(list) tokens of ‘text’</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">testFile module</a><ul>
+<li><a class="reference internal" href="#testFile.Spamfilter"><code class="docutils literal notranslate"><span class="pre">Spamfilter</span></code></a><ul>
+<li><a class="reference internal" href="#testFile.Spamfilter.classify"><code class="docutils literal notranslate"><span class="pre">Spamfilter.classify()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.classify_all"><code class="docutils literal notranslate"><span class="pre">Spamfilter.classify_all()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.clean_table"><code class="docutils literal notranslate"><span class="pre">Spamfilter.clean_table()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.create_frequency_table"><code class="docutils literal notranslate"><span class="pre">Spamfilter.create_frequency_table()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.print_table_info"><code class="docutils literal notranslate"><span class="pre">Spamfilter.print_table_info()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.prob_ham"><code class="docutils literal notranslate"><span class="pre">Spamfilter.prob_ham()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.prob_msg_ham"><code class="docutils literal notranslate"><span class="pre">Spamfilter.prob_msg_ham()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.prob_msg_spam"><code class="docutils literal notranslate"><span class="pre">Spamfilter.prob_msg_spam()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.Spamfilter.prob_spam"><code class="docutils literal notranslate"><span class="pre">Spamfilter.prob_spam()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#testFile.clean_split"><code class="docutils literal notranslate"><span class="pre">clean_split()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.dir_tokens"><code class="docutils literal notranslate"><span class="pre">dir_tokens()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.file_tokens"><code class="docutils literal notranslate"><span class="pre">file_tokens()</span></code></a></li>
+<li><a class="reference internal" href="#testFile.tokens"><code class="docutils literal notranslate"><span class="pre">tokens()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="subtraction.html"
+                          title="previous chapter">subtraction module</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/testFile.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="subtraction.html" title="subtraction module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Sphinx Presentation 1.0.0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >&lt;no title&gt;</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">testFile module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Andrew Harrison.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.0.1.
+    </div>
+  </body>
+</html>

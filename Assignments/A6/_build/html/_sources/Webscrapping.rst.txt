@@ -1,0 +1,7 @@
+Webscrapping module
+===================
+
+.. automodule:: Webscrapping
+   :members:
+   :undoc-members:
+   :show-inheritance:
