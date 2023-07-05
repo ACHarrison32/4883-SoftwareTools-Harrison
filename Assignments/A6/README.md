@@ -43,4 +43,11 @@
 <img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_apidoc.PNG" >
 
 #### Once you have created the rst files, open your modules.rst file and make sure the follwing python file is called.
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Modules.PNG" >
+
+## :bookmark_tabs: Making Your index.rst and Toctree’s
+#### Toctree’s are your Table of Contents Tree’s
+#### This is where you will add your modules.rst file that calls your specified modules
+#### You can add many toctree’s and have them link to different files
+#### Create you index.rst using restructured text. This will be how your HTML cite looks.
+
