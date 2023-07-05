@@ -17,7 +17,7 @@
 ## :desktop_computer: Starting Sphinx:
 #### Quickstart sphinx in command terminal: sphinx-quickstart
 #### Fill out the next few questions:
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Quickstart.PNG" >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/images/Sphinx_Quickstart.PNG" >
 
 #### This creates you Sphinx project now you create your HTML documents and document you python code.
 
@@ -25,11 +25,11 @@
 #### First add your Python code documents in the folder that you quickstarted Sphinx in.
 #### Open up your conf.py file: code conf.py
 #### Add the following 3 lines to the file:
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Python_Path.PNG">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/images/Sphinx_Python_Path.PNG">
 
 #### Adding these 3 lines allows Sphinx to locate and import your project’s modules during the documentation generation process
 #### Now we need to add the following Extensions:
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Extensions.PNG" >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/images/Sphinx_Extensions.PNG" >
 
 #### sphinx.ext.autodoc: This extension is used to automatically generate API documentation from your Python code.
 #### sphinx.ext.viewcode: This extension adds links to the source code of documented Python objects, allowing users to easily view the source code.
@@ -40,10 +40,10 @@
 ## :file_folder: Creating Your rst Files and Including Modules
 #### Now you want to make your rst files from your python code files.
 #### To do this run the following command: sphinx-apidoc -o <output_directory> <source_directory>
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_apidoc.PNG" >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/images/Sphinx_apidoc.PNG" >
 
 #### Once you have created the rst files, open your modules.rst file and make sure the follwing python file is called.
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A6/images/Sphinx_Modules.PNG" >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/images/Sphinx_Modules.PNG" >
 
 ## :bookmark_tabs: Making Your index.rst and Toctree’s
 #### Toctree’s are your Table of Contents Tree’s
@@ -58,4 +58,4 @@
 | 2 |[subtraction.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/subtraction.py)|
 | 3 |[multiplication.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/multiplication.py)|
 | 4 |[division.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/division.py)|
-| 5 |[testfile](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/addition.py)|
+| 5 |[testfile](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A06/testFile.py)|
