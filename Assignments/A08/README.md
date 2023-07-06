@@ -31,11 +31,11 @@
 | 'regions' | This route retrieves a list of WHO regions from the database. It returns a JSON response containing the list of regions.|
 | 'deaths' | This route retrieves the total deaths for the given country, region, and/or year. It accepts the following query parameters: country, region, and year. If no parameters are provided, it returns the total deaths for all countries. It returns a JSON response containing the total deaths. |
 | 'cases' | This route retrieves the total cases for the given country, region, and/or year. It accepts the same query parameters as the /deaths/ route (country, region, year). If no parameters are provided, it returns the total cases for all countries. It returns a JSON response containing the total cases.|
-| 'maxdeaths' | Retrieves the country with the maximum number of deaths. It returns a JSON response with the country name. |
-| 'mindeaths' | Retrieves the country with the minimum number of deaths. It returns a JSON response with the country name. |
-| 'mostdeathsduring' | Retrieves the country with the most deaths between the specified start and end dates. Accepts two query parameters: start_date and end_date (both in the format "year-month-day"). It returns a JSON response with the country name and the number of deaths. |
-| 'leastdeathsduring' | Retrieves the country with the least deaths between the specified start and end dates. Accepts two query parameters: start_date and end_date (both in the format "year-month-day"). It returns a JSON response with the country name and the number of deaths. |
-| 'average_deaths' | Calculates the average number of deaths between all countries. It returns a JSON response with the average number of deaths. |
+| 'maxdeaths' | This route retrieves the country with the maximum number of deaths. It returns a JSON response with the country name. |
+| 'mindeaths' | This route retrieves the country with the minimum number of deaths. It returns a JSON response with the country name. |
+| 'mostdeathsduring' | This route retrieves the country with the most deaths between the specified start and end dates. Accepts two query parameters: start_date and end_date (both in the format "year-month-day"). It returns a JSON response with the country name and the number of deaths. |
+| 'leastdeathsduring' | This route retrieves the country with the least deaths between the specified start and end dates. Accepts two query parameters: start_date and end_date (both in the format "year-month-day"). It returns a JSON response with the country name and the number of deaths. |
+| 'average_deaths' | This route calculates the average number of deaths between all countries. It returns a JSON response with the average number of deaths. |
 
 ## :fountain_pen: Implementation
 #### Importing- The code imports modules such as FastAPI, csv, uvicorn, etc.
