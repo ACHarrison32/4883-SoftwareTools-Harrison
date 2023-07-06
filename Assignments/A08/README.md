@@ -47,14 +47,14 @@
 #### The main challenge I faced is lack of knowledge on this assignment. The day that we went over this assignment I had missed classed because I was sick. Because of this it was difficult at first to get a good understanding on what I was doing. Luckily I was able to obtain some help from some classmates to get me started.
 
 ## :camera: Output Photos
-#### 	:world_map: Countries
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Countries.PNG" >
+### 	:world_map: Countries
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Countries.PNG" width = "750">
 
-#### :earth_africa: Regions
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Regions.PNG" >
+### :earth_africa: Regions
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Regions.PNG" width = "750">
 
-#### :skull: Deaths
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Deaths.PNG" >
+### :skull: Deaths
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Deaths.PNG" width = "750">
 
-#### :chart_with_upwards_trend: Cases
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Cases.PNG" >
+### :chart_with_upwards_trend: Cases
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Cases.PNG" width = "750">
