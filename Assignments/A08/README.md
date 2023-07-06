@@ -36,7 +36,7 @@
 #### Importing- The code imports modules such as FastAPI, csv, uvicorn, etc.
 #### Loading Covid Data- The code opens the data.csv file and reads its contents using a CSV reader.
 #### Data Processing Functions
-##### - get_countries(): Retrieves a list of countries from the data.
-##### - get_regions(): Retrieves a list of WHO regions from the data.
-##### - get_total_deaths(): Calculates the total deaths based on provided country, region, and year parameters.
-##### - get_total_cases(): Calculates the total cases based on provided country, region, and year parameters.
+ - get_countries(): Retrieves a list of countries from the data.
+ - get_regions(): Retrieves a list of WHO regions from the data.
+ - get_total_deaths(): Calculates the total deaths based on provided country, region, and year parameters.
+ - get_total_cases(): Calculates the total cases based on provided country, region, and year parameters.
