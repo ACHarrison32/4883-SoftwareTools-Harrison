@@ -15,10 +15,10 @@
 #### First start by opening the folder in vs code.
 #### Open up [api.py]() and run it. 
 #### Look into your command terminal and select the following:
-<img src = " ">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/LocalHost.PNG" width = "700">
 
 #### Once you open this up it will bring you to this site:
-<img src = " " > 
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/LocalHost5000Site.PNG" width = "700">
 
 #### This is where you can look at the Covid Data
 
