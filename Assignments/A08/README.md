@@ -32,7 +32,7 @@
 | 'deaths' | This route retrieves the total deaths for the given country, region, and/or year. It accepts the following query parameters: country, region, and year. If no parameters are provided, it returns the total deaths for all countries. It returns a JSON response containing the total deaths. |
 | 'cases' | This route retrieves the total cases for the given country, region, and/or year. It accepts the same query parameters as the /deaths/ route (country, region, year). If no parameters are provided, it returns the total cases for all countries. It returns a JSON response containing the total cases.|
 
-
+## ::memo: Implementation
 
 
 
