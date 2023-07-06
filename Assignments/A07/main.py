@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import PySimpleGUI as sg
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -22,7 +23,7 @@ layout = [
     [sg.Text('Year'), sg.Combo(list(range(2000, 2024)), key='-YEAR-', size=(5, 1))],
     [sg.Text('Airport Code'), sg.Combo(airport_codes, key='-AIRPORT-', size=(10, 1))],
     [sg.Button('Submit'), sg.Button('Exit')],
-    [sg.Table(values=[], headings=['Airport', 'Date', 'Temperature', 'Precipitation'], key='-TABLE-', max_col_width=25, auto_size_columns=True)]
+    [sg.Table(values=[], headings=['Airport', 'Date', 'High Temp', 'Low Temp', 'Avg Temp', 'Precipitation', 'Dew Point'], key='-TABLE-', max_col_width=25, auto_size_columns=True)]
 ]
 
 # Create the GUI window
@@ -30,7 +31,8 @@ window = sg.Window('Weather Data Scraper', layout)
 
 def scrape_weather_data(url, airport_code):
     # Use Selenium to obtain the dynamically loaded weather data
-    driver = webdriver.Chrome()  # Make sure you have Chrome WebDriver installed and in PATH
+    options = Options()
+    driver = webdriver.Chrome(options=options)
     driver.get(url)
 
     # Wait for the weather data to be loaded asynchronously
@@ -55,16 +57,19 @@ def scrape_weather_data(url, airport_code):
         cells = row.find_all('td')
         if len(cells) == 9:
             date = cells[0].get_text(strip=True)
-            temperature = cells[1].get_text(strip=True)
-            precipitation = cells[7].get_text(strip=True)
+            high_temp = cells[1].get_text(strip=True) if cells[1].has_attr('_ngcontent-app-root-c211') else ''
+            low_temp = cells[2].get_text(strip=True) if cells[2].has_attr('_ngcontent-app-root-c211') else ''
+            avg_temp = cells[3].get_text(strip=True) if cells[3].has_attr('_ngcontent-app-root-c211') else ''
+            precipitation = cells[7].get_text(strip=True) if cells[7].has_attr('_ngcontent-app-root-c211') else ''
+            dew_point = cells[8].get_text(strip=True) if cells[8].has_attr('_ngcontent-app-root-c211') else ''
             airport_name = airport_names.get(airport_code, '')
-            data.append([airport_name, date, temperature, precipitation])
+            data.append([airport_name, date, high_temp, low_temp, avg_temp, precipitation, dew_point])
 
     return data
 
 # Event loop to handle GUI events
 while True:
-    event, values = window.read()
+    event, values =window.read()
 
     if event == sg.WINDOW_CLOSED or event == 'Exit':
         break
@@ -82,9 +87,9 @@ while True:
         # Scrape weather data using the constructed URL
         weather_data = scrape_weather_data(url, airport_code)
 
-        # Update the table with the scraped data
+        # Update the table with the scraped weather_data.
         table = window['-TABLE-']
-        
+
         if len(weather_data) == 0:
             sg.popup('No weather data available for the selected date and airport.')
         else:
