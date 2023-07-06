@@ -21,7 +21,7 @@
 <img src = " " > 
 
 #### This is where you can look at the Covid Data
-<img src = " " >
+
 
 ## :bookmark_tabs: Explaing each API Endpoint
 | Route | Explanation |
