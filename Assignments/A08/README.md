@@ -48,13 +48,13 @@
 
 ## :camera: Output Photos
 #### 	:world_map: Countries
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Countries.PNG" >
 
 #### :earth_africa: Regions
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Regions.PNG" >
 
 #### :skull: Deaths
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Deaths.PNG" >
 
 #### :chart_with_upwards_trend: Cases
-<img src = " " >
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Cases.PNG" >
