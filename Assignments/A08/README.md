@@ -40,3 +40,21 @@
  - get_regions(): Retrieves a list of WHO regions from the data.
  - get_total_deaths(): Calculates the total deaths based on provided country, region, and year parameters.
  - get_total_cases(): Calculates the total cases based on provided country, region, and year parameters.
+#### CORS Middleware- The code adds CORS middleware to allow cross-origin requests.
+#### Running the Application- The code uses uvicorn to run the FastAPI application on the specified host and port.
+
+## :heavy_exclamation_mark: Challenges Faced
+#### The main challenge I faced is lack of knowledge on this assignment. The day that we went over this assignment I had missed classed because I was sick. Because of this it was difficult at first to get a good understanding on what I was doing. Luckily I was able to obtain some help from some classmates to get me started.
+
+## :camera: Output Photos
+#### 	:world_map: Countries
+<img src = " " >
+
+#### :earth_africa: Regions
+<img src = " " >
+
+#### :skull: Deaths
+<img src = " " >
+
+#### :chart_with_upwards_trend: Cases
+<img src = " " >
