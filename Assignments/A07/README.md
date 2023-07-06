@@ -4,16 +4,16 @@
 #### This project will combine a python GUI with a beautiful soup web scraper to: 1. grab, 2. save and 3. display the data. The initial python gui will be used to enter the appropriate values to allow you to leverage the URL, meaning it will accept values for: month, day, year, airport code, and daily. The resulting python gui will display the received data in a tabular format. 
 
 ### Input Data PNG
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/PYSimpleGui.PNG">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/PYSimpleGui.PNG" width = "750">
 
 ### Dropdown Menu PNG
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Dropdown.PNG">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Dropdown.PNG" width = "750">
 
 ### Website Pulled Up Whenever You Click Submit PNG
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Website.PNG">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Website.PNG" width = "750">
 
 ### Output Message PNG
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Output Message.PNG">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Output Message.PNG" width = "750">
 
 ### Code
 | # | File |
