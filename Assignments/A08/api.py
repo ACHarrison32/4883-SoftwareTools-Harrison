@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
 import csv
+import uvicorn
 
 app = FastAPI(
     title="COVID-19 API",
@@ -24,7 +25,7 @@ with open('data.csv', 'r') as file:
         db.append(row)
 
 
-def get_unique_countries():
+def get_countries():
     countries = set()
 
     for row in db:
@@ -33,7 +34,7 @@ def get_unique_countries():
     return list(countries)
 
 
-def get_unique_regions():
+def get_regions():
     regions = set()
 
     for row in db:
@@ -87,13 +88,13 @@ async def docs_redirect():
 @app.get("/countries/")
 async def countries():
     """Retrieves a list of unique countries from the database."""
-    return {"countries": get_unique_countries()}
+    return {"countries": get_countries()}
 
 
 @app.get("/regions/")
 async def regions():
     """Retrieves a list of available WHO regions from the database."""
-    return {"regions": get_unique_regions()}
+    return {"regions": get_regions()}
 
 
 @app.get("/deaths/")
