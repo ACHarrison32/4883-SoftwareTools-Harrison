@@ -47,6 +47,7 @@
 #### The main challenge I faced is lack of knowledge on this assignment. The day that we went over this assignment I had missed classed because I was sick. Because of this it was difficult at first to get a good understanding on what I was doing. Luckily I was able to obtain some help from some classmates to get me started.
 
 ## :camera: Output Photos
+### There is nothing else past the output photos
 ### 	:world_map: Countries
 <img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Countries.PNG" width = "750">
 
