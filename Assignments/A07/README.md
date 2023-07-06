@@ -13,7 +13,7 @@
 <img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Website.PNG" width = "600">
 
 ### Output Message PNG
-<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Output Message.PNG" width = "500">
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/Output Message.PNG" width = "250">
 
 ### Code
 | # | File |
