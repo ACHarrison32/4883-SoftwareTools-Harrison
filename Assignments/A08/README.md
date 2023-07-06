@@ -8,8 +8,8 @@
 
 | # | File |
 | - | ---- |
-| 1 | [api.py]() |
-| 2 | [data.csv]()|
+| 1 | [api.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/api.py) |
+| 2 | [data.csv](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/data.csv)|
 
 ## :question: How to run my code
 #### First start by opening the folder in vs code.
