@@ -11,3 +11,29 @@
 | 1 | [api.py]() |
 | 2 | [data.csv]()|
 
+## :question: How to run my code
+#### First start by opening the folder in vs code.
+#### Open up [api.py]() and run it. 
+#### Look into your command terminal and select the following:
+<img src = " ">
+
+#### Once you open this up it will bring you to this site:
+<img src = " " > 
+
+#### This is where you can look at the Covid Data
+<img src = " " >
+
+## :bookmark_tabs: Explaing each API Endpoint
+| Route | Explanation |
+| ----- | ----------- |
+|  '/'  | This is the base route of the API. |
+| 'countries' | This route retrieves a list of countries from the database. It returns a JSON response containing the list of countries. |
+| 'regions' | This route retrieves a list of WHO regions from the database. It returns a JSON response containing the list of regions.|
+| 'deaths' | This route retrieves the total deaths for the given country, region, and/or year. It accepts the following query parameters: country, region, and year. If no parameters are provided, it returns the total deaths for all countries. It returns a JSON response containing the total deaths. |
+| 'cases' | This route retrieves the total cases for the given country, region, and/or year. It accepts the same query parameters as the /deaths/ route (country, region, year). If no parameters are provided, it returns the total cases for all countries. It returns a JSON response containing the total cases.|
+
+
+
+
+
+
