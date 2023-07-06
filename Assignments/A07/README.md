@@ -21,8 +21,9 @@
 | 1 |[main.py](https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A07/main.py)|
 
 ## What Went Well
-### Implementing the PYSimpleGUI went well as it was easy to use and edit
-### Whenever I fill out the information in the input table and click submit the website is pulled up for a brief second to show that its building the correct URL.
+#### Implementing the PYSimpleGUI went well as it was easy to use and edit
+#### Whenever I fill out the information in the input table and click submit the website is pulled up for a brief second to show that its building the correct URL.
 
 ## What Went Wrong
-### I am still unable to get it to properly scrape the website. I keep getting an error message stating "No weather data available for the selected date and airport." I am unsure what I am currently doing wrong.
+#### I am still unable to get it to properly scrape the website. 
+#### I keep getting an error message stating "No weather data available for the selected date and airport." 
