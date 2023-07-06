@@ -1,14 +1,12 @@
 from fastapi import FastAPI
 from fastapi.responses import RedirectResponse
 from fastapi.middleware.cors import CORSMiddleware
-import uvicorn
 import csv
 
 app = FastAPI(
-    description="""🚀
-    ## 4883 Software Tools
-    ### Where awesomeness happens
-    """
+    title="COVID-19 API",
+    description="""A RESTful API that provides access to COVID-19 data.""",
+    version="1.0.0",
 )
 
 db = []
@@ -19,17 +17,14 @@ with open('data.csv', 'r') as file:
     # Create a CSV reader object
     reader = csv.reader(file)
 
-    i = 0
+    next(reader)  # Skip the header row
+
     # Read each row in the CSV file
     for row in reader:
-        if i == 0:
-            i += 1
-            continue
         db.append(row)
 
 
-def getUniqueCountries():
-    global db
+def get_unique_countries():
     countries = set()
 
     for row in db:
@@ -38,14 +33,49 @@ def getUniqueCountries():
     return list(countries)
 
 
-def getUniqueWhos():
-    global db
-    whos = set()
+def get_unique_regions():
+    regions = set()
 
     for row in db:
-        whos.add(row[3])
+        regions.add(row[3])
 
-    return list(whos)
+    return list(regions)
+
+
+def get_total_deaths(country=None, region=None, year=None):
+    total_deaths = 0
+
+    for row in db:
+        if country and row[2] != country:
+            continue
+
+        if region and row[3] != region:
+            continue
+
+        if year and int(row[0][:4]) != year:
+            continue
+
+        total_deaths += int(row[7])
+
+    return total_deaths
+
+
+def get_total_cases(country=None, region=None, year=None):
+    total_cases = 0
+
+    for row in db:
+        if country and row[2] != country:
+            continue
+
+        if region and row[3] != region:
+            continue
+
+        if year and int(row[0][:4]) != year:
+            continue
+
+        total_cases += int(row[5])
+
+    return total_cases
 
 
 @app.get("/")
@@ -57,56 +87,35 @@ async def docs_redirect():
 @app.get("/countries/")
 async def countries():
     """Retrieves a list of unique countries from the database."""
-    return {"countries": getUniqueCountries()}
+    return {"countries": get_unique_countries()}
 
 
-@app.get("/whos/")
-async def whos():
-    """Retrieves a list of unique WHO regions from the database."""
-    return {"whos": getUniqueWhos()}
+@app.get("/regions/")
+async def regions():
+    """Retrieves a list of available WHO regions from the database."""
+    return {"regions": get_unique_regions()}
 
 
-@app.get("/casesByRegion/")
-async def cases_by_region(year: int = None):
+@app.get("/deaths/")
+async def deaths(country: str = None, region: str = None, year: int = None):
     """
-    Retrieves the number of cases by region.
-    If a year is specified, it filters the cases for that year.
+    Retrieves the total deaths for the given country, region, and/or year.
+    If no parameters are provided, it returns the total deaths for all countries.
     """
-    cases = {}
+    total_deaths = get_total_deaths(country, region, year)
 
-    for row in db:
-        if year is not None and int(row[0][:4]) != year:
-            continue
-
-        if row[3] not in cases:
-            cases[row[3]] = 0
-
-        cases[row[3]] += int(row[4])
-
-    return {"data": cases, "success": True, "message": "Cases by Region", "size": len(cases), "year": year}
+    return {"total_deaths": total_deaths}
 
 
-my_list = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+@app.get("/cases/")
+async def cases(country: str = None, region: str = None, year: int = None):
+    """
+    Retrieves the total cases for the given country, region, and/or year.
+    If no parameters are provided, it returns the total cases for all countries.
+    """
+    total_cases = get_total_cases(country, region, year)
 
-
-@app.get("/get_values1/")
-def get_values1(index1: int = None, index2: int = None):
-    try:
-        value1 = my_list[index1]
-        value2 = my_list[index2]
-        return [value1, value2]
-    except IndexError:
-        return {"error": "Invalid index provided."}
-
-
-@app.get("/get_values2/{index1}/{index2}")
-def get_values2(index1: int, index2: int):
-    try:
-        value1 = my_list[index1]
-        value2 = my_list[index2]
-        return [value1, value2]
-    except IndexError:
-        return {"error": "Invalid index provided."}
+    return {"total_cases": total_cases}
 
 
 # CORS middleware to allow cross-origin requests
@@ -120,4 +129,3 @@ app.add_middleware(
 
 if __name__ == "__main__":
     uvicorn.run("api:app", host="127.0.0.1", port=5000, log_level="debug", reload=True)
- 
