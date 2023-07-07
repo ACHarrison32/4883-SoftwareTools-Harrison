@@ -62,5 +62,20 @@
 ### :skull: Deaths
 <img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Deaths.PNG" width = "750">
 
-### :chart_with_upwards_trend: Cases
+### :bar_chart: Cases
 <img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/Cases.PNG" width = "750">
+
+### :skull_and_crossbones: Max Deaths
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/MaxDeaths.PNG" width = "750">
+
+### :knife: Min Deaths
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/MinDeaths.PNG" width = "750">
+
+### :chart_with_upwards_trend: Most Deaths During
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/MostDeaths.PNG" width = "750">
+
+### :chart_with_downwards_trend: Least Deaths During
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/LeastDeaths.PNG" width = "750">
+
+### 	:imp: Average Deaths
+<img src = "https://github.com/ACHarrison32/4883-SoftwareTools-Harrison/blob/main/Assignments/A08/AvgDeaths.PNG" width = "750">
