@@ -18,4 +18,11 @@
 | Huy Ngo | [Anchorpoint](https://www.anchorpoint.work/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
 | Makkena Srinivas | [ffmpeg](https://en.wikipedia.org/wiki/FFmpeg) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
 | Timothy Lockhart | [ImageMagick](https://imagemagick.org/index.php) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
-| Rakesh Rapalli | [Trello](https://trello.com) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> | |
+| Rakesh Rapalli | [Trello](https://trello.com) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> | 
+| Jorge Sanots | [Git with Repl.it](https://replit.com/~) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Ahmed Krubally | [Unreal Engine](https://www.unrealengine.com/en-US) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Edwin Palacios Mondragon | [Click Up](https://testsigma.com/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Vineela Seerla | [Jira](https://www.atlassian.com/software/jira/free) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Sai Teja Sripathi | [Graphy](https://graphy.app/)  | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Sai Prakash Boddu Venkata | [Selenium](https://www.selenium.dev/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Athul Sajikumar | [REGEX](https://regexr.com/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
