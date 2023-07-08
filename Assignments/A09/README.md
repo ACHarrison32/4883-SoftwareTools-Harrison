@@ -26,3 +26,9 @@
 | Sai Teja Sripathi | [Graphy](https://graphy.app/)  | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
 | Sai Prakash Boddu Venkata | [Selenium](https://www.selenium.dev/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
 | Athul Sajikumar | [REGEX](https://regexr.com/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Naga Vamshi Krishna Jammalamadaka | [Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Sai Neeraj Chandragiri | [Kubernetes](https://kubernetes.io/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/index.png" width="10"> |
+| Nirupavardhan Lingareddygari | [Vmware](https://docs.vmware.com/en/VMware-Tools/index.html) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
+| Harikrishna Mundra | [Vim](https://www.vim.org/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
+| Alexia Ducreay | [SendBird](https://sendbird.com/?utm_medium=paid-search&utm_source=bing&utm_content=brand&utm_campaign=2023-q1-paid-search-bing-brand&msclkid=910744d89c1b1d1324f82070859a2a3f&utm_term=SendBird) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
+| Swaraj Chirumamilla | [MatPlotLib](https://matplotlib.org/) | <img src="https://github.com/ACHarrison32/4883-PT-Harrison/blob/main/images.png" width="10"> |
